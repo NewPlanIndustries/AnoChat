@@ -7,7 +7,7 @@
 <p>SnapChat currently does not use HTTPS, which means anyone watching your network traffic could eavesdrop. In chat, however, users must be joined to send/receive messages. If you see someone you didn't expect in the room, don't say anything, or ask them to leave. Since SnapChat doesn't record any information on the server, they won't be able to see any of the conversation prior to joining.</p>
 <br>
 <h3>Can I see the source code?</h3>
-<p><em><strong>No!</strong></em> Yes. The code will be posted on GitHub in the very near future.</p>
+<p>Sure, it's all up on <a href="https://github.com/scaryuncledevin/SnapChat.org" target="_blank">GitHub</a>.</p>
 <br>
 <h3>Why is there no mobile site?</h3>
 <p>A design is in progress that will work well on mobile, but there is currently no ETA on that.</p>
