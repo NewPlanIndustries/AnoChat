@@ -1,0 +1,185 @@
+@import url('niceInput.css');
+
+input.button::-moz-focus-inner{padding:0;border:0;}
+
+html, body {
+	height:100%;
+}
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	background-color:#F0F0F5;
+	font-size:14px;
+	color:#222;
+	margin:0;
+	padding:0;
+	line-height:20px;
+}
+
+h1, h2, h3, h4, p, label, form {
+	display:block;
+	padding:0;
+	margin:0 0 0.5em 0;
+}
+
+ul, li {
+	margin:0.5em auto;
+}
+
+h1 { font-size: 20px; }
+h2 { font-size: 18px; }
+h3 { font-size: 16px; }
+
+a {
+	color:#2F5F8F;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+a:hover {
+	text-decoration:none;
+}
+
+a img {
+	border:none;
+}
+
+.small {
+	font-size:12px;
+	color:#777777;
+}
+
+.modalOverlay {
+	background-color:#FBFBFB;
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:0;
+}
+
+.modalContainer, .modalClose {
+	position:fixed;
+	left:50%;
+	top:100px;
+}
+
+.modalContainer {
+	padding:10px;
+	background-color:#FFFFFF;
+}
+
+.modalClose {
+	width:16px;
+	height:16px;
+	margin-top:-8px;
+	cursor:pointer;
+}
+
+.modalScroller {
+	overflow:auto;
+}
+
+.errorMessage {
+	position:fixed;
+	padding:3px;
+	background-color:#F00;
+	color:#FFF;
+	font-weight:bold;
+	font-size:11px;
+}
+
+#stickyWrapper {
+	min-height:100%;
+}
+
+#stickyContent.header {
+	padding-top:40px;
+}
+
+#stickyContent.footer {
+	padding-bottom:40px;
+}
+
+#stickyFooter {
+	height:40px;
+	margin-top:-40px;
+	background-color:#2F5F8F;
+}
+
+#header {
+	background-color:#2F5F8F;
+	border-bottom:1px solid #333;
+	color:#FFFFFF;
+	padding:5px 0;
+	
+	position:fixed;
+	height:40px;
+	width:100%;
+	z-index:10;
+	line-height:40px;
+}
+
+#footer {
+	background-color:#2F5F8F;
+	border-top:1px solid #333;
+	color:#FFFFFF;
+	font-size:10px;
+	padding:10px 0;
+	
+	position:fixed;
+	height:20px;
+	line-height:20px;
+	width:100%;
+	bottom:0;
+	z-index:10;
+}
+
+#footer p {
+	margin:0;
+}
+
+#header a,
+#footer a {
+	color:#FFF;
+}
+
+#header .nav {
+	text-align:right;
+}
+
+#header .nav a {
+	height:20px;
+	background-color:#D5DFE9;
+	padding:5px 10px;
+	color:#222;
+	font-size:10px;
+	font-weight:bold;
+	margin:0;
+	border:1px solid #FFF;
+	border-left-width:0;
+}
+
+#header .nav a:first-child {
+	border-left-width:1px;
+}
+
+#header .nav a:hover {
+	background-color:#FFFFFF;
+}
+
+#content {
+	padding:50px 0 40px;
+}
+
+label {
+	font-weight:bold;
+	display:inline-block;
+}
+
+.required {
+	font-size:12px;
+	font-weight:normal;
+	font-style:italic;
+	color:#991111;
+}

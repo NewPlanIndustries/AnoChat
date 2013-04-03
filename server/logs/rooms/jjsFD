@@ -1,0 +1,8 @@
+STARTING SERVER AT "localhost" ON PORT 22201
+SERVER STARTED
+ERROR : Array
+(
+    [status] => 
+    [message] => Invalid userID
+)
+

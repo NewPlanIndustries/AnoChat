@@ -1,0 +1,109 @@
+.body {
+	margin-top:1em;
+	margin-bottom:1em;
+}
+
+#chatBox {
+	width:800px;
+	margin:0 auto;
+}
+#joinBox {
+	width:400px;
+	margin:0 auto;
+}
+
+#chatLogContainer {
+	background-color:#FFFFFF;
+	border-right:none;
+	width:649px;
+	float:left;
+}
+
+#chatLog p {
+	padding-bottom:0.5em;
+}
+
+#chatLog p.error {
+	cursor:pointer;
+	background:#C00;
+	color:#FFFFFF;
+}
+
+#userListContainer {
+	background-color:#F0F0F0;
+	width:148px;
+	float:left;
+}
+
+#chatLogScroller, #userListScroller {
+	margin:5px;
+	height:440px;
+	overflow:auto;
+}
+
+#userListScroller {
+	height:419px;
+}
+
+#userListHeader {
+	border-bottom:1px solid #CCC;
+}
+
+#userListHeader button {
+	width:25%;
+	height:20px;
+	line-height:20px;
+	border:none;
+	background:none;
+	text-align:center;
+	cursor:pointer;
+}
+
+#userListHeader button:hover {
+	color:#333333;
+	background:#DDD;
+}
+
+#userList div {
+	white-space: nowrap;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#userList div.away {
+	opacity:0.8;
+	font-style:italic;
+}
+
+#chatInputArea {
+	clear:both;
+	padding-top:10px;
+	margin:0;
+}
+
+#joinInput {
+	width:305px;
+}
+#chatInput {
+	width:705px;
+}
+
+#changeNameInput {
+	width:305px;
+}
+#invitesInput {
+	width:305px;
+}
+
+#changeNameButton, #leaveButton {
+	margin-right:5px;
+}
+
+#help {
+	background-color:#00CC66;
+}
+
+#startInput {
+	width:365px;
+}

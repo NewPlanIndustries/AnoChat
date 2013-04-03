@@ -1,0 +1,2 @@
+/usr/bin/php /var/www/snapchat/html/index.php system clean >> /var/www/snapchat/server/logs/system/cleaning_`date +%F`;
+echo -e "\n" >> /var/www/snapchat/server/logs/system/cleaning_`date +%F`

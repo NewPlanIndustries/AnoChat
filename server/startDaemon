@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ "$1" = "debug" ]
+then
+	/usr/bin/php /var/www/snapchat/server/daemon.php
+else
+	mv /var/www/snapchat/server/logs/system/daemon /var/www/snapchat/server/logs/system/daemon.`date +%F_%k_%M_%S`
+	
+	nohup /usr/bin/php /var/www/snapchat/server/daemon.php > /var/www/snapchat/server/logs/system/daemon &
+	
+	if [ "$1" = "tail" ]
+	then
+		tail -f /var/www/snapchat/server/logs/system/daemon
+	fi
+fi

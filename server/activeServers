@@ -1,0 +1,2 @@
+#!/bin/bash
+ps x | grep php | grep -v grep
