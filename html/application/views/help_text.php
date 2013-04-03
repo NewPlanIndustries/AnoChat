@@ -4,7 +4,7 @@
 <p>Kindly send in a report <a href="/bugs" target="_blank">here</a>.</p>
 <br>
 <h3>How private/secure is SnapChat?</h3>
-<p>SnapChat currently does not use HTTPS, which means anyone watching your network traffic could eavesdrop. In chat, however, users must be joined to send/receive messages. If you see someone you didn't expect in the room, don't say anything, or ask them to leave. Since SnapChat doesn't record any information on the server, they won't be able to see any of the conversation prior to joining.</p>
+<p>By forcing an HTTPS connection as well as requiring users must be joined to send/receive messages. If you see someone you didn't expect in the room, don't say anything, or ask them to leave. Since SnapChat doesn't record any information on the server, they won't be able to see any of the conversation prior to joining.</p>
 <br>
 <h3>Can I see the source code?</h3>
 <p>Sure, it's all up on <a href="https://github.com/scaryuncledevin/SnapChat.org" target="_blank">GitHub</a>.</p>
@@ -26,6 +26,7 @@
 		<ul>
 			<li>No name required. Users who forego using a name will be given the name "Anonymous X", where X is the number of unnamed users who have joined.</li>
 			<li>Users must be joined to send/receive messages.</li>
+			<li>HTTPS connection.</li>
 			<li>Easy invite system.</li>
 			<li>Unique URLs that are hard to guess.</li>
 		</ul>
@@ -33,7 +34,6 @@
 	<li>
 		<strong>Upcoming Features:</strong>
 		<ul>
-			<li>HTTPS connection.</li>
 			<li>Notification sounds.</li>
 			<li>Mobile site/application.</li>
 			<li>Room startup options:
