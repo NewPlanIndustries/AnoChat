@@ -47,12 +47,14 @@
 
 #userListHeader {
 	border-bottom:1px solid #CCC;
+	height:20px;
+	line-height:20px;
 }
 
 #userListHeader button {
 	width:25%;
-	height:20px;
-	line-height:20px;
+	height:inherit;
+	line-height:inherit;
 	border:none;
 	background:none;
 	text-align:center;
