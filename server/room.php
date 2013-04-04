@@ -27,7 +27,7 @@ class Room extends Socket
 	{
 		$data = parent::process($socketID, $buffer);
 		
-		if (!array_key_exists("action", $data)) throw new Exception("Missing action");
+		if (!array_key_exists("action", $data)) $this->exception("process", "Missing action", $data); //throw new Exception("Missing action");
 		
 		switch($data["action"])
 		{
@@ -36,7 +36,7 @@ class Room extends Socket
 			case "send":
 			case "get":
 			case "check":
-				if (!array_key_exists("data", $data)) throw new Exception("Missing data");
+				if (!array_key_exists("data", $data)) $this->exception("process", "Missing data", $data); //throw new Exception("Missing data");
 				$this->$data["action"]($socketID, $data["data"]);
 				break;
 			case "userList":
@@ -47,7 +47,7 @@ class Room extends Socket
 				$this->clean($socketID, $force);
 				break;
 			default:
-				throw new Exception("Invalid action:" . $data["action"]);
+				$this->exception("process", "Invalid action", $data); //throw new Exception("Invalid action:" . $data["action"]);
 		}
 		
 		$this->log($this->users);
@@ -55,7 +55,7 @@ class Room extends Socket
 	
 	function check($socketID, $data)
 	{
-		if (!array_key_exists("userID", $data)) throw new Exception("Missing userID");
+		if (!array_key_exists("userID", $data)) $this->exception("check", "Missing userID", $data); //throw new Exception("Missing userID");
 		$userID = $data["userID"];
 		
 		$this->writeDataToSocket($socketID, array(
@@ -68,7 +68,7 @@ class Room extends Socket
 	var $anonCount = 0;
 	function join($socketID, $data)
 	{
-		if (!array_key_exists("name", $data)) throw new Exception("Missing name");
+		if (!array_key_exists("name", $data)) $this->exception("join", "Missing name", $data); //throw new Exception("Missing name");
 		$name = htmlentities(trim($data["name"]));
 		
 		$userID = array_key_exists("userID", $data) ? $data['userID'] : false;
@@ -94,7 +94,7 @@ class Room extends Socket
 			if ($loopUser["name"] == $name)
 			{
 				$exceptionMessage = ($loopID == $userID) ? "Name has not changed" : "There is already a user with this name present";
-				throw new Exception($exceptionMessage);
+				$this->exception("join", $exceptionMessage, $data); //throw new Exception($exceptionMessage);
 			}
 		}
 		
@@ -130,7 +130,7 @@ class Room extends Socket
 	
 	function leave($socketID, $data)
 	{
-		if (!array_key_exists("userID", $data)) throw new Exception("Missing userID");
+		if (!array_key_exists("userID", $data)) $this->exception("leave", "Missing userID", $data); //throw new Exception("Missing userID");
 		
 		$userID = $data["userID"];
 		$name = $this->users[$userID]["name"];
@@ -149,11 +149,11 @@ class Room extends Socket
 	
 	function send($socketID, $data)
 	{
-		if (!array_key_exists("userID", $data)) throw new Exception("Missing userID");
-		if (!array_key_exists("message", $data)) throw new Exception("Missing message");
+		if (!array_key_exists("userID", $data)) $this->exception("send", "Missing userID", $data); //throw new Exception("Missing userID");
+		if (!array_key_exists("message", $data)) $this->exception("send", "Missing message", $data); //throw new Exception("Missing message");
 		
 		$userID = $data["userID"];
-		if (!array_key_exists($userID, $this->users)) throw new Exception("Invalid userID");
+		if (!array_key_exists($userID, $this->users)) $this->exception("send", "Invalid userID", $data); //throw new Exception("Invalid userID");
 		
 		$this->writeDataToSocket($socketID, array(
 			"status" => true,
@@ -173,11 +173,12 @@ class Room extends Socket
 	
 	function get($socketID, $data)
 	{
-		if (!array_key_exists("userID", $data)) throw new Exception("Missing userID");
+		if (!array_key_exists("userID", $data)) $this->exception("get", "Missing userID", $data); //throw new Exception("Missing userID");
 		
 		$userID = $data["userID"];
 		$this->log($userID);
-		if (!array_key_exists($userID, $this->users)) throw new Exception("Invalid userID");
+		
+		if (!array_key_exists($userID, $this->users)) $this->exception("get", "Invalid userID", $data); //throw new Exception("Invalid userID");
 		
 		$queue = $this->users[$userID]["queue"];
 		$this->writeDataToSocket($socketID, array(
@@ -206,7 +207,7 @@ class Room extends Socket
 			'cleanInterval' => $this->cleanInterval
 		));
 		
-		if ($now < $cleanTime && !$force) throw new Exception("Cleaning Interval has not yet elapsed, " . ($cleanTime - $now) . "s left");
+		if ($now < $cleanTime && !$force) throw new Exception("Cleaning interval has not yet elapsed, " . ($cleanTime - $now) . "s left");
 		
 		$leftPeriod = $now - $this->leaveInterval;
 		$awayPeriod = $now - $this->awayInterval;
@@ -282,6 +283,28 @@ class Room extends Socket
 		{
 			echo print_r($data, true) . PHP_EOL;
 		}
+	}
+	
+	function exception($function, $message, $data)
+	{
+		throw new Exception($function . ": " . $message . PHP_EOL . print_r($this->redactKeys(array("message","name"), $data), true));
+	}
+	
+	function redactKeys($keys, $array)
+	{
+		foreach($array as $key => $value)
+		{
+			if (is_array($value))
+			{
+				$array[$key] = $this->_redactKeys($keys, $value);
+			}
+			elseif (in_array($key, $keys))
+			{
+				$array[$key] = "[REDACTED]";
+			}
+		}
+		
+		return $array;
 	}
 }
 
