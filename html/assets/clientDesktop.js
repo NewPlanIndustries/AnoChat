@@ -61,7 +61,8 @@ var client = {
 			}
 			else
 			{
-				if (redirect("/"+room.roomID))
+				URL,Title,NewState,TrackURL
+				if (redirect("/"+room.roomID, undefined, undefined, "/room"))
 				{
 					document.title = SITE_TITLE + " - Chat - " + room.roomID;
 					client._init(room.roomID);

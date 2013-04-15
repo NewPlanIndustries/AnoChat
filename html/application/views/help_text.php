@@ -6,6 +6,9 @@
 <h3>How private/secure is SnapChat?</h3>
 <p>By forcing an HTTPS connection as well as requiring users must be joined to send/receive messages. If you see someone you didn't expect in the room, don't say anything, or ask them to leave. Since SnapChat doesn't record any personal information on the server*, they won't be able to see any of the conversation prior to joining.</p>
 <br>
+<h3>Why is there analytics tracking on the site?</h3>
+<p>This is for statistical purposes only. Inividual rooms are not tracked directly, but are grouped together as the page "room". Check the source code for a better understanding.</p>
+<br>
 <h3>Can I see the source code?</h3>
 <p>Sure, it's all up on <a href="https://github.com/scaryuncledevin/SnapChat.org" target="_blank">GitHub</a>.</p>
 <br>

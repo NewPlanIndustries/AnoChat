@@ -80,12 +80,20 @@ jQuery.fn.checkField = function(target)
 }
 
 var pushStateSupported = history.pushState !== undefined;
-function redirect(URL,Title,NewState)
+function redirect(URL,Title,NewState,TrackURL)
 {
 	Title = Title == undefined ? '' : Title;
 	NewState = NewState == undefined ? '' : NewState;
 	
-	if (pushStateSupported) window.history.pushState(NewState,Title,URL);
+	if (pushStateSupported)
+	{
+		window.history.pushState(NewState,Title,URL);
+		if (_gaq != undefined)
+		{
+			TrackURL = TrackURL == undefined ? URL : TrackURL;
+			_gaq.push(['_trackPageview',TrackURL]);
+		}
+	}
 	else window.location.href = URL;
 	
 	return pushStateSupported;
@@ -393,4 +401,11 @@ function get_html_translation_table (table, quote_style) {
     }
 
     return hash_map;
+}
+
+function injectScript(src)
+{
+	var script = $('<script>').attr('src',src).attr('async',true);
+	console.log(script);
+	$($(document).find('head,body')[0]).append(script);
 }

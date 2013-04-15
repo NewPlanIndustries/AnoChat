@@ -17,3 +17,10 @@
 
 </body>
 </html>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-40163404-1']);
+_gaq.push(['_trackPageview'<?php echo isset($roomID) && !empty($roomID) ? ",'/room'" : "" ?>]);
+injectScript('https://ssl.google-analytics.com/ga.js');
+</script>
