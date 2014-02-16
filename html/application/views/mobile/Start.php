@@ -8,7 +8,7 @@
 		<div id="StartArea">Loading client&hellip;</div>
 	</div>
 	<div class="grid_8">
-		<h2>Why use SnapChat?</h2>
+		<h2>Why use AnoChat?</h2>
 		<ul>
 			<li>No information required, not even your name.</li>
 			<li>Doesn"t require any special software.</li>

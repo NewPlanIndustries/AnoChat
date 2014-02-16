@@ -4,4 +4,4 @@ Hi there,
 
 <?php echo site_url($roomID); ?>
 
-SnapChat is a free service that runs right in your browser, no software necessary.
+AnoChat is a free service that runs right in your browser, no software necessary.

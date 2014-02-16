@@ -326,7 +326,7 @@ class Room extends CI_Model
 		{
 			$this->email->clear();
 			
-			$this->email->from('noresponse@snapchat.org','SnapChat');
+			$this->email->from('noresponse@anochat.org','AnoChat');
 			$this->email->to($email);
 			$this->email->subject($subject);
 			$this->email->message($message);

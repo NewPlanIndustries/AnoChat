@@ -51,7 +51,7 @@ class Main extends CI_Controller
 				$room = $room ? $room : "(NO ROOM)";
 				
 				$this->email->from($email,$name);
-				$this->email->to('bugs@snapchat.org');
+				$this->email->to('bugs@anochat.org');
 				$this->email->subject($subject);
 				$this->email->message(join(PHP_EOL,array(
 					"Room: " . $room,
@@ -66,14 +66,14 @@ class Main extends CI_Controller
 				{
 					$this->email->clear();
 					
-					$this->email->from("bugs@snapchat.org","SnapChat Bug Reports");
+					$this->email->from("bugs@anochat.org","AnoChat Bug Reports");
 					$this->email->to($email);
 					$this->email->subject("Bug Report Recieved");
 					$this->email->message(join(PHP_EOL,array(
 						"We've received your bug report as detailed below and are looking into it.",
 						"",
 						"Thanks,",
-						"SnapChat Development",
+						"AnoChat Development",
 						str_repeat("=",50),
 						"",
 						"Room: " . $room,

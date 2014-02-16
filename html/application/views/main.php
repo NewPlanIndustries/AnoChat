@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>SnapChat - Still Under Development</title>
+		<title>AnoChat - Still Under Development</title>
 		<style type="text/css">
 			body {
 				background-color:#2F5F8F;
@@ -34,7 +34,7 @@
 	</head>
 	
 	<body>
-		<h1 align="center"><img src="/assets/images/logo.png" alt="SnapChat" /></h1>
+		<h1 align="center"><img src="/assets/images/logo.png" alt="AnoChat" /></h1>
 		<h2 align="center">Still Under Development</h2>
 		<p align="center"><small>&copy; Copyright 2009 - <?php echo date('Y'); ?></small></p>
 	</body>

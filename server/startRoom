@@ -8,8 +8,8 @@ fi
 
 if [ "$3" = "true" ]
 then
-	/usr/bin/php /var/www/snapchat/server/room.php $1 $2
+	/usr/bin/php room.php $1 $2
 else
-	nohup /usr/bin/php /var/www/snapchat/server/room.php $1 $2 > /var/www/snapchat/server/logs/rooms/$2 &
+	nohup /usr/bin/php room.php $1 $2 > logs/rooms/$2 &
 fi
 

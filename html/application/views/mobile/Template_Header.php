@@ -16,7 +16,7 @@
 <div id="Header">
 	<div class="container_16">
 		<div class="grid_16">
-			<a href="/start"><img src="/assets/logo_small.png" align="SnapChat" height="40" /></a>
+			<a href="/start"><img src="/assets/logo_small.png" align="AnoChat" height="40" /></a>
 		</div>
 		<div class="clear"></div>
 	</div>

@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'https://snapchat.org/';
+$config['base_url']	= 'https://anochat.org/';
 
 /*
 |--------------------------------------------------------------------------

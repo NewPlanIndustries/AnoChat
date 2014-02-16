@@ -3,4 +3,12 @@
 <file name="clientDesktop.css" server="snapchat.org//var/www/snapchat/" local="130095786163750895" remote="130095786160000000" />
 <file name="functions.js" server="snapchat.org//var/www/snapchat/" local="130105184610582262" remote="130105184610000000" />
 <file name="clientDesktop.js" server="snapchat.org//var/www/snapchat/" local="130117233223122636" remote="130117233050000000" />
+<file name="clientDesktop.js" server="anochat.org//var/www/snapchat/" local="130370562465614818" remote="130370563680000000" />
+<file name="960.css" server="anochat.org//var/www/snapchat/" local="130370557227915239" remote="130370563680000000" />
+<file name="main.css" server="anochat.org//var/www/snapchat/" local="130370557227955241" remote="130370563680000000" />
+<file name="clientDesktop.css" server="anochat.org//var/www/snapchat/" local="130370557227915239" remote="130370563680000000" />
+<file name="clientAPI.js" server="anochat.org//var/www/snapchat/" local="130370557227915239" remote="130370563680000000" />
+<file name="niceInput.css" server="anochat.org//var/www/snapchat/" local="130370557227955241" remote="130370563680000000" />
+<file name="jStorage.js" server="anochat.org//var/www/snapchat/" local="130370557227955241" remote="130370563680000000" />
+<file name="functions.js" server="anochat.org//var/www/snapchat/" local="130370562223140950" remote="130370563680000000" />
 </dwsync>

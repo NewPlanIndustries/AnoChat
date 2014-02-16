@@ -40,7 +40,7 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
 
-define('SITE_TITLE', 'SnapChat');
+define('SITE_TITLE', 'AnoChat');
 define('HOME_PAGE','start');
 define('HEADER_404','404 Page Not Found');
 define('MESSAGE_404','The page you requested was not found.');

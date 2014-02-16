@@ -1,4 +1,5 @@
-var SITE_TITLE = "SnapChat";
+var SITE_TITLE = "AnoChat";
+var JSTORAGE_KEY = "anochat_";
 
 if(typeof String.prototype.trim !== 'function') {
 	String.prototype.trim = function() {

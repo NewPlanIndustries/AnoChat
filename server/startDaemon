@@ -2,14 +2,14 @@
 
 if [ "$1" = "debug" ]
 then
-	/usr/bin/php /var/www/snapchat/server/daemon.php
+	/usr/bin/php daemon.php
 else
-	mv /var/www/snapchat/server/logs/system/daemon /var/www/snapchat/server/logs/system/daemon.`date +%F_%k_%M_%S`
+	mv logs/system/daemon logs/system/daemon.`date +%F_%k_%M_%S`
 	
-	nohup /usr/bin/php /var/www/snapchat/server/daemon.php > /var/www/snapchat/server/logs/system/daemon &
+	nohup /usr/bin/php daemon.php > logs/system/daemon &
 	
 	if [ "$1" = "tail" ]
 	then
-		tail -f /var/www/snapchat/server/logs/system/daemon
+		tail -f logs/system/daemon
 	fi
 fi

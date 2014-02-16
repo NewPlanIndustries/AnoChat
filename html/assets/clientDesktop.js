@@ -122,7 +122,7 @@ var client = {
 				makeElement("div",{"class":"container",id:"chatLogContainer"},[
 					makeElement("div",{id:"chatLogScroller"},[
 						makeElement("div",{id:"chatLog"},[
-							$.jStorage.get("snapchat_"+room.roomID,"")
+							$.jStorage.get(JSTORAGE_KEY+room.roomID,"")
 						])
 					])
 				]),
@@ -220,7 +220,7 @@ var client = {
 		$("#chatLog").append(messageBlock);
 		
 		//REMOVE BAD MESSAGES?
-		$.jStorage.set("snapchat_"+room.roomID,$('#chatLog').html());
+		$.jStorage.set(JSTORAGE_KEY+room.roomID,$('#chatLog').html());
 		
 		if (autoScroll) $("#chatLogScroller").scrollTop($("#chatLog").height());
 		
@@ -281,7 +281,7 @@ var client = {
 	},
 	runLeave:function()
 	{
-		$.jStorage.deleteKey("snapchat_"+room.roomID);
+		$.jStorage.deleteKey(JSTORAGE_KEY+room.roomID);
 		
 		closeModal(function(){
 			room.stopListening();

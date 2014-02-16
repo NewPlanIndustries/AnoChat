@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
 <file name="room.php" server="snapchat.org//var/www/snapchat/" local="130095270758140000" remote="130095268970000000" />
+<file name="helpers.php" server="anochat.org//var/www/snapchat/" local="130370557228295261" remote="130370563850000000" />
+<file name="activeServers" server="anochat.org//var/www/snapchat/" local="130370557228285260" remote="130370563850000000" />
+<file name="startDaemon" server="anochat.org//var/www/snapchat/" local="130370561484858722" remote="130370563860000000" />
+<file name="startRoom" server="anochat.org//var/www/snapchat/" local="130370561485058734" remote="130370563860000000" />
+<file name="runClean" server="anochat.org//var/www/snapchat/" local="130370561494669283" remote="130370563860000000" />
+<file name="socket.php" server="anochat.org//var/www/snapchat/" local="130370557228315262" remote="130370563860000000" />
+<file name="daemon.php" server="anochat.org//var/www/snapchat/" local="130370557228285260" remote="130370563850000000" />
+<file name="room.php" server="anochat.org//var/www/snapchat/" local="130370557228305261" remote="130370563850000000" />
 </dwsync>

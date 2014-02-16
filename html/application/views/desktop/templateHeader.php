@@ -21,7 +21,7 @@ if (isset($roomID))
 <div id="header">
 	<div class="container_16">
 		<div class="grid_8">
-			<h1><a href="/"><img src="/assets/images/logo_small.png" align="SnapChat" height="40" /></a></h1>
+			<h1><a href="/"><img src="/assets/images/logo_small.png" align="AnoChat" height="40" /></a></h1>
 		</div>
 		<div class="grid_8 nav">
 			<a href="/help">Help</a><a href="/bugs">Bugs</a>
